@@ -1,0 +1,153 @@
+body{
+    background: #293952;
+    display: flex;
+    justify-content: center;
+    padding: 200px 50px;
+}
+
+.container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.mail{
+    
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    transition: 0.4s;
+
+    transform: translateY(50px);
+}
+
+.mail .bodyy{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #e95f55 transparent;
+    bottom: 0;
+    border-style: solid;
+    border-width: 0 0 100px 200px;
+    z-index: 2;
+}
+
+.mail .top-fold{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #e95f55 transparent;
+    top: 50px;
+    transform: rotateX(180deg);
+    border-style: solid;
+    border-width: 50px 100px 0 100px;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s, z-index 0.2s;
+    z-index: 0;
+}
+
+.mail .back-fold{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #cf4a43;
+    bottom: 0;
+    z-index: 0;
+}
+
+.mail .left-fold{
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent #e15349;
+    border-style: solid;
+    border-width: 50px 0 50px 100px;
+    z-index: 2;
+}
+
+.mail .letter{
+    
+    height: 0px;
+    background: white;
+    left: 20px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s 0.2s;
+   
+}
+
+.mail .letter .border{
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 8px, transparent 8px, transparent 18px);
+}
+.paragrafo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-family: "Charmonman", cursive;
+    font-weight: 400;
+    font-weight: 700;
+    padding: 9px 0 0 0;
+    
+}
+.mail .letter .title{
+    height: 5px;
+    background: #cb5a5e;
+    margin-top: 10px;
+    margin-left:5px ;
+}
+
+.mail .letter .stamp{
+    
+    height: 30px;
+    width: 40px;
+    background: #cb5a5e;
+    margin-top: 50px;
+    margin-left:120px;
+    border-radius: 100%;
+    opacity: 0.3;
+}
+
+.shadow{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    background: radial-gradient(#00000080, #00000000, #00000000);
+    top: 200px;
+    left: 50%;
+    transition: 0.04s;
+    transform:translateX(-50%);
+    border-radius: 100%;
+}
+
+.container:hover .mail{
+    transform: rotateY(50px);
+}
+
+.container:hover .mail .top-fold{
+    transition: trasform 0.4s 0.4s, z-index 0. 2s 0.4s;
+    transform: rotateX(360deg);
+    z-index: 2;
+}
+
+.container:hover .mail .letter{
+    height: 180px;
+}
+
+.container:hover .shadow{
+    width: 400px;
+}
+
+@media (max-width: 2400 ){
+    .container{
+        margin: 5rem;
+        justify-content: center;
+        zoom: 1.8;
+    }
+}
