@@ -68,7 +68,7 @@ body{
 }
 
 .mail .letter{
-    
+    width: 160px;
     height: 0px;
     background: white;
     left: 20px;
